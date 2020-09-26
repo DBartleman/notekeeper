@@ -1,4 +1,6 @@
 import React from 'react';
+import { Redirect } from "react-router-dom";
+import { login } from "../reducers/authentication";
 
 class Login extends React.Component {
     constructor(props) {
@@ -7,25 +9,29 @@ class Login extends React.Component {
             firstName: 'Demo',
             lastName: 'User',
             email: 'demo@email.com',
-            password: 'demo'
+            password: 'demo',
         };
     }
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        login(email, username, password);
+        login(this.email, this.password);
     };
-    updateEmail = (e) => {
-        setEmail(e.target.value);
-    };
-    //   const updateUsername = (e) => {
-    //       setUsername(e.target.value);
-    //   };
-    // TODO: change form to accept both username or password, or incorporate username somehow
-    const updatePassword = (e) => {
-        setPassword(e.target.value);
-    };
+    setEmail = (email) => {
+        this.email = email;
+    }
+    setPassword = (password) => {
+        this.password = password;
+    }
 
+    // TODO: consult with Mark about how setEmail works in function components rather than class components 
+    // (like in the older project)
+    updateEmail = (e) => {
+        this.setEmail(e.target.value);
+    };
+    updatePassword = (e) => {
+        this.setPassword(e.target.value);
+    };
     if(id) {
         return <Redirect to="/" />;
     }
@@ -35,14 +41,14 @@ class Login extends React.Component {
                 <form action="" method="get" style={{display: "table"}}>
                     <div style={{ display: "table-row" }}>
                         <label for="email">Email: </label>
-                        <input type="email" name="email" id="email" required />
+                        <input type="email" name="email" id="email" required autoFocus onChange={this.updateEmail}/>
                     </div>
                     <div style={{ display: "table-row" }}>
                         <label for="password">Password: </label>
-                        <input type="password" name="password" id="password" required />
+                        <input type="password" name="password" id="password" required onChange={this.updatePassword}/>
                     </div>
                     <div style={{ display: "table-row" }}>
-                        <input type="submit" value="Log in" onClick={handleSubmit}/>
+                        <input type="submit" value="Log in" onClick={this.handleSubmit}/>
                     </div>
                 </form>
             </div>

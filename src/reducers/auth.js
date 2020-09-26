@@ -9,11 +9,11 @@ export const setToken = (payload) => ({
     payload,
 });
 
-export const login = (email, username, password) => async (dispatch) => {
+export const login = (email, password) => async (dispatch) => {
     const response = await fetch(`http://localhost:5000/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, username, password }),
+        body: JSON.stringify({ email, password }),
     });
     if (response.ok) {
         const res = await response.json();
