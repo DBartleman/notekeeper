@@ -1,0 +1,46 @@
+.homepageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* border: solid black 2px; */
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebarLeft {
+  display: flex;
+  flex-direction: column;
+  /* border: solid red 2px; */
+  padding: 2%;
+  width: 25%;
+}
+
+.noteArea {
+  display: flex;
+  flex-direction: column;
+  /* border: solid red 2px; */
+  padding: 2%;
+  width: 75%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#noteTitle {
+
+}
+
+#noteText {
+  
+}
+
+#postNote {
+  width: 100px;
+}
+
+#deleteNote {
+  width: 100px;
+}
