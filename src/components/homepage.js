@@ -1,12 +1,8 @@
 import React from 'react';
 
-class Homepage extends React.Component {
-    constructor(props) {
-        super();
-        this.state = {
-            
-        };
-    }
+export default function Homepage() {
+    return(
+        <div />
+    );
 }
 
-export default Homepage;
