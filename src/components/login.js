@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
-import { login } from "../reducers/authentication";
+import { login } from "../reducers/auth";
 
 class Login extends React.Component {
     constructor(props) {
@@ -32,9 +32,9 @@ class Login extends React.Component {
     updatePassword = (e) => {
         this.setPassword(e.target.value);
     };
-    if(id) {
-        return <Redirect to="/" />;
-    }
+    // if(id) {
+    //     return <Redirect to="/" />;
+    // }
     render() {
         return (
             <div>

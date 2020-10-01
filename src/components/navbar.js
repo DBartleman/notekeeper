@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <div className={"navbar"}>
             <div>Drewgle Keep</div>
-            <input type={"text"} placeholder={"Search"}/>
+            <input type={"text"} placeholder={"Search bar, currently disabled"}/>
             <div>Hello, {user}!</div>
         </div>
     );

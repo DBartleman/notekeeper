@@ -10,6 +10,10 @@ class Signup extends React.Component {
             password: ''
         };
     }
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        // login(this.email, this.password);
+    };
     render() {
         return (
             <div>
@@ -31,7 +35,7 @@ class Signup extends React.Component {
                         <input type="password" name="password" id="password" required />
                     </div>
                     <div style={{ display: "table-row" }}>
-                        <input type="submit" value="Log in" onClick={handleSubmit} />
+                        <input type="submit" value="Log in" onClick={this.handleSubmit} />
                     </div>
                 </form>
             </div>

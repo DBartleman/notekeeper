@@ -18,11 +18,12 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 function App() {
   return (
     <div className="App">
+      {/* Navbar could go here */}
       <BrowserRouter>
         <Switch>
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <PrivateRoute path="/" component={Homepage} />
+          <Route path="/" component={Homepage} /> 
         </Switch>
       </BrowserRouter>
     </div>

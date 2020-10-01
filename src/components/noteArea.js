@@ -16,7 +16,7 @@ export default function NoteArea() {
         </div>
         <div class={"noteArea"}>
           <input type={"text"} id={"noteTitle"} placeholder={"Title"}/>
-          <input type={"text"} id={"noteText"} placeholder={"Enter note text here..."}/>
+          <input type={"text"} id={"noteText"} placeholder={"Enter note body here..."}/>
           <div className={"buttons"}>
             <button id={"postNote"}
               type="button">
