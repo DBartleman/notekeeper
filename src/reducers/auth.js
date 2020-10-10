@@ -13,7 +13,7 @@ function receiveUserReducer(state = initialState, action) {
         return {
             ...state,
             // and update the copy with the new value
-            user: "Drew" // placeholder
+            user: action.payload.firstName 
         }
     }
     // otherwise return the existing state unchanged

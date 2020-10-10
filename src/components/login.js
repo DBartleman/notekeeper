@@ -15,7 +15,7 @@ class Login extends React.Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        login(this.email, this.password);
+        login(this.state);
     };
     setEmail = (email) => {
         this.email = email;
@@ -23,9 +23,6 @@ class Login extends React.Component {
     setPassword = (password) => {
         this.password = password;
     }
-
-    // TODO: consult with Mark about how setEmail works in function components rather than class components 
-    // (like in the older project)
     updateEmail = (e) => {
         this.setEmail(e.target.value);
     };
