@@ -3,10 +3,11 @@ import React from 'react';
 import NoteArea from './noteArea';
 import Navbar from './navbar';
 
+
 export default function Homepage() {
     return (
         <>
-            <Navbar />
+            <Navbar /> 
             <NoteArea />
         </>
     );
