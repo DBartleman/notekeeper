@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { configureStore } from '@reduxjs/toolkit'
+import { receiveUserReducer } from './reducers/auth';
+
+const store = configureStore({ reducer: receiveUserReducer });
+console.log(store.getState());
 
 ReactDOM.render(
   <React.StrictMode>

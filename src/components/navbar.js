@@ -1,6 +1,6 @@
 import React from 'react';
 import '../stylesheets/navbar.css';
-import { receiveUserReducer } from '../reducers/auth';
+// import { receiveUserReducer } from '../reducers/auth';
 
 
 export default function Navbar() {
