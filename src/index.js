@@ -7,6 +7,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { receiveUserReducer } from './reducers/auth';
 
 const store = configureStore({ reducer: receiveUserReducer });
+
 console.log(store.getState());
 
 ReactDOM.render(
